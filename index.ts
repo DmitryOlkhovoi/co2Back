@@ -24,7 +24,7 @@ async function addItem(item: Item) {
 }
 
 async function getItems() {
-    return Response.json(await sql`SELECT * FROM data LIMIT ${MINUTES_IN_24H} ORDER BY date`);
+    return Response.json(await sql`SELECT * FROM data LIMIT ${MINUTES_IN_24H} ORDER BY date DESC`);
 }
 
 async function handlePOSTRequests(req: Request) {
